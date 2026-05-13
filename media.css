@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    font-size: large;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+}
+#img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size:small;
+    }
+    #img{
+        width: 150%;
+        
+    }
+    p{
+        background-color: black;
+        color:brown;
+        font-size-adjust: none;
+    }
+}
