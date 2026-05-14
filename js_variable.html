@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js variable</title>
+        <style>
+        #m{
+            text-align: center;
+            font-size: 50px;   
+            font: weight 20px; ;}
+        </style>
+    </head>
+    <body>
+        <p id="m"> Arithemetic Calculation Opreation </p>
+        <p id="sum"></p>
+        <p id="div"></p>
+        <p id="mul"></p>
+        <p id="sub"></p>
+        <p id="modu"></p>
+        <script>
+    var a = 10;
+    var b = 20;
+    var sum = a + b;
+    let mul=a*b;
+    let div=a/b;
+    let sub=a-b;
+    let modu=a%b;
+    document.getElementById("sum").innerHTML = "The sum of " + a + " and " + b + " is: " + sum;
+    document.getElementById("div").innerHTML = "The division of " + a + " and " + b + " is: " + div;
+    document.getElementById("mul").innerHTML = "The multiplication of " + a + " and " + b + " is: " + mul;
+    document.getElementById("sub").innerHTML = "The difference of " + a + " and " + b + " is: " + sub;
+    document.getElementById("modu").innerHTML = "The remainder of " + a + " and " + b + " is: " + modu;
+</script>
+        <br>
+        <h1>typs of datatypses </h1>
+        <script>
+let num=123; // number
+let str="hello world"; // string
+let bool=true; // boolean
+let arr=[1,2,3,4,5]; // array
+let obj={name:"farhan",age:20}; // object
+
+document.write(typeof num);
+document.write(" : "+ num);
+document.write("<br>"+ typeof str);
+document.write(" : "+ str);
+document.write("<br>"+ typeof bool);
+document.write(" : "+ bool);
+document.write("<br>"+ typeof arr);
+document.write(" : "+ arr);
+document.write("<br>"+ typeof obj);
+document.write(" : "+ obj);
+</script>
+
+    </body>
+</html>
