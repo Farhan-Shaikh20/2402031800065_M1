@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>if else in js</title>
+        <style>
+        .m{
+            text-align: center;
+            font-size: 50px;   
+            font: weight 15px; ;}
+        </style>
+    </head>
+    <body>
+        <h1 class="m">if else statement in JS</h1>
+        <ol>
+            <li><h2>Voting Eligibility</h2></li>
+            <script>
+                let age=18;
+                document.write("your age is: "+ age);
+                document.write("<br>");
+                if(age>=18){
+                    document.write("you are eligible for voting");
+                }
+                else{
+                    document.write("you are not eligible for voting");
+                }</script>
+            <li><h2>Check Positive or Negative Number</h2></li>
+                <script>
+                let num=10;
+                document.write("number is: "+ num);
+                document.write("<br>");
+                if (num >= 0){
+                    document.write("number is positive");
+                }
+                else{document.write("number is negetive");
+
+                }
+                </script>
+            <li> <h2>Even or Odd Check</h2></li>
+                <script>
+                let e=456;
+                document.write("number is: "+ e);
+                document.write("<br>");
+                if( e%2==0){
+                    document.write("number is even");
+                    }
+                else{
+                    document.write("number is odd")
+            
+                }
+                </script>
+            <li><h2> Greatest of Two Numbers</h2></li>
+                <script>
+                let x=10;
+                let y=20;
+                document.write("x = "+ x);
+                document.write("<br>");
+                document.write("y = "+ y);
+                document.write("<br>");
+                if(x>y){
+                    document.write("x is greater than y");
+                }
+                else{
+                    document.write("y is greater than x");
+                } 
+                </script>
+            <li><h2> check password </h2></li>
+                <script>
+                    let pss="farhan33";
+                    let confpss="farhan33";
+                    document.write("password is:"+ pss);
+                    document.write("<br>");
+                    if(pss==confpss){
+                        document.write("password is correct");
+                    }
+                    else{
+                        document.write("password is incorrect");
+                    }
+                </script>
+        </ol>
+    </body>
+</html>

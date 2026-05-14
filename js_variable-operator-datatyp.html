@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>js variable</title>
         <style>
-        #m{
+        .m{
             text-align: center;
-            font-size: 50px;   
-            font: weight 20px; ;}
+            font-size: 30px;   
+            font: weight 15px; ;}
         </style>
     </head>
     <body>
-        <p id="m"> Arithemetic Calculation Opreation </p>
+        <!-- operatore in js -->
+        <p class="m"> Arithemetic Calculation Opreation </p>
         <p id="sum"></p>
         <p id="div"></p>
         <p id="mul"></p>
@@ -31,7 +32,31 @@
     document.getElementById("mul").innerHTML = "The multiplication of " + a + " and " + b + " is: " + mul;
     document.getElementById("sub").innerHTML = "The difference of " + a + " and " + b + " is: " + sub;
     document.getElementById("modu").innerHTML = "The remainder of " + a + " and " + b + " is: " + modu;
+
 </script>
+        <br>
+        <h2 class="m">Typs of operatore: </h2>
+
+        <ul>
+            <li>Arithemetic</li>
+            <li> increment -decrement</li>
+            <li>comparison</li>
+            <li>logical</li>
+            <li>bitwise</li>
+            <li>assigment</li>
+        </ul>
+        <script>
+            document.write("increment-decrement:<br>");
+            let prein=5
+            document.write("value preincremetn: "+ ++prein);
+            document.write("<br>");
+             let psotin=5
+            document.write("value  post increment:<br> "+ psotin++);
+            document.write("<br>");
+            
+            
+                </script>
+        <!-- data typs in js -->
         <br>
         <h1>Datatyps </h1>
         <script>
