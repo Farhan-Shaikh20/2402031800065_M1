@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch and ternary</title>
+</head>
+<body>
+    <h1>Switch and Ternary</h1>
+    <h2>Switch example</h2>
+    <script>
+        let day = 3;
+        let dayName;
+        document.write("input:" + day); // Output: 3
+
+        switch (day) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                dayName = "Invalid day";
+        }
+
+        document.write(dayName); // Output: Wednesday
+    </script>
+    <hr>
+    <h2>Ternary example</h2>
+    <script>
+       let a= 10;
+       let b= 20;
+       let max = (a > b) ? a : b;
+       document.write("The maximum value is: " + max);
+    </script>
+    <h1> break and continue</h1>
+    <h2>Break example</h2>
+    <script>
+        document.write("Break example: stop loop when i is 5<br>");
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5) {
+                break; // Exit the loop when i is 5
+            }
+            document.write(i + " "); // Output: 1 2 3 4
+        }
+    </script>
+    <h2>Continue example</h2>
+    <script>
+        document.write("Continue example: print only odd numbers<br>");
+        for (let i = 1; i <= 10; i++) {
+            if (i%2==0) {
+                continue; // Skip the rest of the loop body when i is even
+            }
+            document.write(i + " "); // Output: 1 3 5 7 9
+        }
+    </script>
+</body>
+</html>
