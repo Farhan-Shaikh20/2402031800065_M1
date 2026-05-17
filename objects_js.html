@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>objects in js
+        </title>
+    </head>
+    <body>
+        <h1>objects in js</h1>
+        <p>JavaScript comes with some inbuilt objects which are,<br>
+            String<br>
+            Date<br>
+            Array<br>
+            Boolean<br>
+            Math<br>
+            RegExp
+            etc….
+        </p>
+        <h3> js allow to create user define object </h3><br>;
+        <p>typs of user deffine objects: <br>1.litral notetion<br>2. by kye
+            words </p>
+<h3>user defined objects</h3>
+        <script>
+            let obj={
+                fn:"farhan",
+                ln:"shaikh",
+                age:20,
+                city:"ahemedabad",
+                info:function()
+                {
+                    document.write("hello, " + obj.fn + " " + obj.ln + " your age is " + obj.age + "you living in " + obj.city);
+
+                }
+            }
+            obj.info();
+            </script>
+            <h3>object  by key words</h3>
+            <script>
+                let obj2=new Object();
+                obj2.int="This is the object created by key word";
+                obj2.show1=function(){
+                    document.write(obj2.int);
+                };
+                obj2.show1();
+            </script>
+    </body>
+</html>

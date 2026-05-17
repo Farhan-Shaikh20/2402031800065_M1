@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in js</title>
+</head>
+<body>
+    <h1>Function in JavaScript</h1>
+    <script>
+        // A function is a block of code that performs a specific task. It can be defined once and called multiple times in a program.
+        // In js if you give any perametre in if your not specigy the type of perametre then it will be consider as any type of data.
+        function demo(a){
+            
+            if (typeof(a) === "number"){
+                document.write("<br>" + a + "  -- This is a number<br>");
+            }
+            else if (typeof(a) === "string"){
+                document.write("<br>" + a + "  -- This is a string<br>");
+            }
+            else if (typeof(a) === "boolean"){
+                document.write("<br>" + a + "  -- This is a boolean<br>");
+            }
+            else{
+                document.write("<br>" + a + "  -- This is an object<br>");
+            }
+        }
+        demo(10);
+        demo("Hello");
+        demo(true);
+        demo({name: "John", age: 30});
+        
+    </script>
+    <hr>
+    <h1>argument variables</h1>
+    <script>
+        // In JavaScript, the arguments variable is an array-like object that contains all the arguments passed to a function. It allows you to access and manipulate the arguments within the function.
+        function sum() {
+            let total = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            return total;
+        }
+        document.write("The sum of 1, 2, and 3 is: " + sum(1, 2, 3));
+    </script>
+    <hr>
+    <h1>arrow functions</h1>
+    <script>
+        // Arrow functions are a concise way to write functions in JavaScript. They have a shorter syntax and automatically bind the 'this' value.
+        let add=(a,b)=>a+b;
+        document.write("The sum of number is :"+add(5,5));
+    </script>
+</body>
+</html>
