@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #28692a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            
+            cursor: pointer;
+
+        }
+        input[type="submit"]:hover {
+            background-color: #457147;
+           
+        }
+        </style>
+</head>
+
+<body>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const course = document.getElementById('course').value;
+
+            if (name === '' || email === '' || password === ''|| gender === '' || course === '') {
+                alert('Please fill in all fields.');
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return false;
+            }
+
+            alert('Registration successful!');
+            return true;
+        }
+    </script>
+    <h2 style="text-align: center;">Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        <label for="course">Course:</label><br>
+        <select id="course" name="course">
+            <option value="B.tech">B.tech</option>
+            <option value="M.tech">M.tech</option>
+            <option value="BBA">BBA</option>
+            <option value="MBA">MBA</option>
+        </select>   <br><br>
+        
+
+
+
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>

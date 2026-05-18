@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kmouse over &out-event</title>
+</head>
+<body>
+    <img src="https://i.pinimg.com/736x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg" alt="Image" id="myImage" width="300">
+</body>
+<script>
+    var a = document.getElementById("myImage");
+    a.addEventListener("mouseover",function(){
+        a.src="https://www.freepik.com/free-photos-vectors/light-bulb-off";
+    });
+    a.addEventListener("mouseout",function(){
+        a.src="https://i.pinimg.com/736x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg";
+    });
+</script>
+</html>
