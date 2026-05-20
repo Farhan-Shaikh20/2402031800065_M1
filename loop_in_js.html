@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in js</title>
+</head>
+<body>
+    <h1>loops in js</h1>
+    <p>loops are used to repeat a block of code until a specified condition is met.</p>
+
+    <h2>for loop</h2>
+    <p>the for loop is used to run a block of code a certain number of times.</p>
+    <pre><code>
+        for (initialization; condition; increment) {
+            // code to be executed
+        }
+    </code></pre>
+
+    <h2>while loop</h2>
+    <p>the while loop is used to run a block of code as long as a specified condition is true.</p>
+    <pre><code>
+        while (condition) {
+            // code to be executed
+        }
+    </code></pre>
+
+    <h2>do...while loop</h2>
+    <p>the do...while loop is similar to the while loop, but it will always execute the block of code at least once, even if the condition is false.</p>
+    <pre><code>
+        do {
+            // code to be executed
+        } while (condition);
+    </code></pre>
+    <h1 style="text-align: center; font-size: 210%;"> loops practice</h1><br>
+    <h2>1. print 1-10 in for loop </h2>
+    <script>
+        for (let i=1; i<=10; i++){
+            document.write(i +"<br>");
+        }
+    </script>
+    <h2>2. print even number (1-50) </h2>
+    <script>
+        document.write("even numbers:<br>");
+        for (let i=1; i<=50; i++){
+            if (i%2==0){
+                document.write(i +"<br>");
+                }
+        }
+    </script>
+    <h2>3. print calculate marks </h2><br>
+    <script>
+        let marks = [85, 90, 78, 92, 88];
+        let totalMarks = 0;
+        for(let i=0; i<marks.length;i++){
+            document.write("subject"+i+"marks:"+marks[i]+"<br>");
+        }
+        for (let i=0; i<marks.length; i++){
+            totalMarks += marks[i];
+        }
+        
+        document.write("<br><hr>Total Marks: " + totalMarks + "<br>");
+    </script>
+<h2>4. multiplication table</h2>
+<script>
+    let num=5;
+    document.write("Multiplication Table of "+num+"<br>");
+    for (let i=1; i<=10;i++){
+        document.write(num +" x " + i + " = " + num*i +"<br>")
+    }
+</script>
+<h2>5.while loop</h2>
+<script>
+    let c =0;
+    while (c<=10){
+        document.write( c +"<br>");
+        c++;
+    }</script>
+    <h3>6. do while-odd number print</h3>
+    <script>
+        let d=2;
+        document.write("odd numbers<br>");
+        do{
+            if (d%2 == 0){d+=1;}
+            else{d+=2;}
+            document.write(d+"<br>");
+             } while (d<=10);
+    </script>
+    <h2>7. sum of an array</h2>
+    <script>
+        let arr=[1,2,3,4,5];
+        let sum=0;
+        for (let i=0; i<arr.length; i++){
+            sum = arr[i]+sum;
+
+        }
+        document.write("sum of array:"+sum);
+    </script>
+    <h2>8. Array Traversing using for...of</h2>
+    <script>
+        let fruits = ["apple", "banana", "mengo"];
+        document.write("This is a array:<br>"+fruits+"<br><br>");
+        document.write("Array Traversing using for...of:<br>");
+        for (let fr of fruits){
+            document.write(fr+"<br>");
+        }
+    </script>
+    <h2>9. factorial of a number</h2>
+    <script>
+        let number=7;
+        let fac=1;
+        for (let i=1; i<=number; i++){
+            fac *=i;
+        }
+        document.write("factorial of "+number+" = "+fac);
+    </script>
+     <h2>10. fibonacci sequence</h2>
+    <script>
+        let n=10;
+       let a=0, b=1;
+        let ab;
+       document.write("fibonacci for "+n+"<br>");
+       for (let i=2; i<=n; i++){
+           document.write(a + " ");
+            ab = a + b;
+           a= b;
+           b= ab;
+
+       }
+    </script>
+     <h2>11. object travesing</h2>
+    <script>
+        let student = {
+            name : "Farhan",
+            age : 18,
+            city : "Ahmedabad"
+        };
+        document.write("direct object print:<br> " + student.age+"<br>"+ student.name+"<br>"+ student.city);
+document.write("<br><br>object traversing using for...in:<br>");
+        for(let key in student){
+
+            document.write(key + " : " + student[key] + "<br>");
+
+        }
+    </script>
+     <h2>12. nested loop</h2>
+     <script>
+        for (let i=1; i<=3; i++){
+            document.write("outer loop: "+i+"<br>");
+            for (let j=1; j<=2; j++){
+                document.write("-  -- inner loop: "+j+"<br>");
+            }
+        }
+        </script>
+        <h3>13.  patterns useing nested loop</h3>
+        <script>                        // pattern 1(right angle triangle)
+            let rows=5;
+            for (let i=1; i<=rows; i++){
+                let pattern="";//method 1
+                for (let j=1; j<=i; j++){
+                 // document.write("*");//method 2
+                   pattern += "*";//method 1
+                }
+                document.write(pattern+"<br>");//method 1
+                // document.write("<br>");//method 2    
+            }
+            document.write("<br><br><br>");
+
+                                       // pattern 2 (inverted right angle triangle)
+            for (let i=rows; i>=1; i--){
+                let pattern="";
+                for (let j=1; j<=i; j++){
+                    pattern += "*";
+                }
+                document.write(pattern+"<br>");
+            }
+            document.write("<br><br><br>");
+
+                                        // pattern 3 (pyramid);!!!!! understanging is important
+            for (let i=1; i<=rows; i++){
+                let pattern="";
+                for (let j=1; j<=rows-i; j++){
+                    pattern += "&nbsp;&nbsp;";
+                }
+               for (let k=1; k<=2*i-1; k++){
+                    pattern += "*";
+                }
+                document.write(pattern+"<br>");
+            }
+            document.write("<br><br><br>");
+                                            // pattern 4 number print
+            for (let i=1; i<=rows; i++){
+                let pattern="";
+                for (let j=1; j<=i; j++){
+                    pattern += j + " ";
+                }
+                document.write(pattern+"<br>");
+            }
+        </script>
+        
+</body>
+</html>

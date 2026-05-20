@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Pop-up in JavaScript</h1>
+        <script>
+        // alert() function is used to display a pop-up message to the user.
+        alert("This is a pop-up message! form alert function");
+
+                // prompt() function is used to display a pop-up message that prompts the user to input some data.
+        let input=prompt("Enter your name:");
+
+        // confirm() function is used to display a pop-up message that asks the user to confirm an action.
+        let con= confirm("hello " + input + ", do you want to submit the IT?");
+
+        if (con==true){
+            alert("submitted successfully");
+            document.write(input+" ,your name is submitted successfully");
+        }
+        else{
+            alert("submission is not successful");
+            document.write(input + " ,your name is not submitted");
+        }
+
+    </script>
+    </body>
+</html>

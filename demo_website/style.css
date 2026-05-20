@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #fdf8e5;
 }
@@ -104,7 +106,7 @@ body{
 .hero-content button{
     padding: 15px;
 
-    background-color: gold;
+    background-color: rgba(158, 160, 150, 0.84);
     color: black;
 
     font-size: 18px;
@@ -218,5 +220,93 @@ body{
 .product-item button:hover{
     background-color: gold;
     color: black;
+}
+/* ABOUT SECTION */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 80px 50px;
+
+    background-color: #111;
+
+    flex-wrap: wrap;
+}
+
+/* IMAGE */
+
+.ab-image img{
+    width: 350px;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+}
+
+/* CONTENT */
+
+.ab-contant{
+    max-width: 550px;
+}
+
+/* HEADING */
+
+.ab-contant h2{
+    font-size: 45px;
+
+    color: gold;
+
+    margin-bottom: 20px;
+}
+
+/* PARAGRAPH */
+
+.ab-contant p{
+    color: white;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+
+.ab-contant button{
+    margin-top: 20px;
+
+    padding: 15px 35px;
+
+    border: none;
+
+    background-color: gold;
+
+    color: black;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+
+.ab-contant button:hover{
+    background-color: white;
+
+    transform: scale(1.05);
 }
 
