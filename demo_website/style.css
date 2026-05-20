@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #fdf8e5;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+    background-color: rgb(10, 10, 8);
+}
+
+/* Logo Section */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(10, 10, 8);
+}
+
+.logo h3{
+    font-family:'Courier New', Courier,cursive;
+    font-style: italic;
+    font-size: large;
+    text-decoration: solid;
+    text-shadow: 15px 15px 15px rgba(82, 82, 76, 0.5);
+    color: white;
+    background-color: rgb(10, 10, 8);
+}
+
+/* Logo Image */
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit:cover;
+}
+
+/* Navigation Links */
+.top{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    background-color: black;
+}
+
+.top a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+    background-color: black;
+}
+
+/* Hover Effect */
+.top a:hover{
+    color: rgb(224, 220, 185);
+}
+/* Hero Section */
+
+.hero{
+    height: 90vh;
+
+    background-image: linear-gradient(rgba(255, 253, 247, 0.6),
+    rgba(0,0,0,0.6)),
+    url("images/bg.jpeg");
+    width: 100%;
+
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* Hero Content */
+
+.hero-content h1{
+    color: white;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Button */
+
+.hero-content button{
+    padding: 15px;
+
+    background-color: gold;
+    color: black;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border: 2px solid gold;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+.hero-content button:hover{
+    background-color: white;
+}
+/* PRODUCTS SECTION */
+
+.products{
+    padding: 80px 50px;
+    background-color: #fdf8e5;
+}
+
+/* Section Heading */
+
+.products h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: black;
+}
+
+/* Product Container */
+
+.product-list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Product Card */
+
+.product-item{
+    width: 300px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.product-item:hover{
+    transform: translateY(-10px);
+}
+
+/* Product Image */
+
+.product-item img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Product Name */
+
+.product-item h3{
+    margin-top: 20px;
+    color: black;
+    font-size: 25px;
+}
+
+/* Product Description */
+
+.product-item p{
+    padding: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Optional Button */
+
+.product-item button{
+    padding: 12px 25px;
+
+    border: none;
+
+    background-color: black;
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.product-item button:hover{
+    background-color: gold;
+    color: black;
+}
+
