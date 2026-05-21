@@ -1,0 +1,21 @@
+.hero{
+    text-align:center;
+    margin-top:100px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:black;
+    color:white;
+    margin-top:20px;
+    cursor:pointer;
+}

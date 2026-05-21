@@ -11,7 +11,7 @@ body{
     background-color: #fdf8e5;
 }
 
-/* Navbar */
+                                    /* Navbar */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,7 @@ body{
 
     padding: 20px 50px;
     background-color: rgb(10, 10, 8);
+    /* position:static; */        /* positin is pendding for the navbar to be fixed at the top of the page when scrolling */
 }
 
 /* Logo Section */
@@ -67,7 +68,7 @@ body{
 .top a:hover{
     color: rgb(224, 220, 185);
 }
-/* Hero Section */
+                                    /* Hero Section */
 
 .hero{
     height: 90vh;
@@ -125,7 +126,7 @@ body{
 .hero-content button:hover{
     background-color: white;
 }
-/* PRODUCTS SECTION */
+                                    /* PRODUCTS SECTION */
 
 .products{
     padding: 80px 50px;
@@ -221,7 +222,7 @@ body{
     background-color: gold;
     color: black;
 }
-/* ABOUT SECTION */
+                                        /* ABOUT SECTION */
 
 .about{
     display: flex;
@@ -232,7 +233,7 @@ body{
 
     padding: 80px 50px;
 
-    background-color: #111;
+    background-color: #171715;
 
     flex-wrap: wrap;
 }
@@ -308,5 +309,90 @@ body{
     background-color: white;
 
     transform: scale(1.05);
+}
+
+                                /* CONTACT SECTION */
+
+.contact{
+    padding: 100px 20px;
+
+    background-color: #fdf8e5;
+
+    text-align: center;
+}
+
+/* Heading */
+
+.contact h2{
+    font-size: 45px;
+
+    color: black;
+
+    margin-bottom: 40px;
+}
+
+/* Form */
+
+.contact-form{
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* Inputs */
+
+.contact-form input,
+.contact-form textarea{
+    padding: 15px;
+
+    border: 2px solid rgba(249, 220, 56, 0.927);
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+/* Textarea */
+
+.contact-form textarea{
+    height: 150px;
+
+    resize: none;
+}
+
+/* Button */
+
+.contact-form button{
+    padding: 15px;
+
+    border: none;
+
+    background-color: black;
+
+    color: white;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover */
+
+.contact-form button:hover{
+    background-color: rgba(210, 188, 63, 0.461);
+
+    color: black;
 }
 
