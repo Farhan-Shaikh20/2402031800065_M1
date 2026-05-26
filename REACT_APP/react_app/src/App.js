@@ -7,6 +7,21 @@ import Card from "./components/Card";
 import Staets from "./components/Staets";
 
 function App() {
+  const skills = [
+    {
+      title: "Node.js",
+      description: "Node.js is used for backend development",
+    },
+    {
+      title: "MongoDB",
+      description: "MongoDB stores database data",
+    },
+    {
+      title: "Express.js",
+      description: "Express helps create APIs",
+    },
+  ];
+
   return (
     <div>
       <Navbar />
@@ -25,6 +40,16 @@ function App() {
         />
         <Card title="React" description="React builds modern UI" />
         <h6>This part is created using props-propertise</h6>
+      </div>
+
+      <div className="arry-card">
+        {skills.map((item) => (
+          <Card
+            key={item.title}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
       </div>
 
       <About />
