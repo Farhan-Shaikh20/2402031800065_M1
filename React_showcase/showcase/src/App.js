@@ -1,26 +1,18 @@
-// import logo from './logo.svg';
-// import './App.css';
+import Sidebar from './components/Sidebar'
+import Props from './concepts/Props'
 
-function App() {
-  return (
-    <div>show case with cloud</div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-  );
+function App(){
+  return(
+    <div className="main-container">
+      <Sidebar />
+      <div className="main-content">
+        <h1>React Playground</h1>
+        <p style={{ marginBottom: '40px', color: '#b9abf3' }}>
+          Har concept ka live demo neeche hai ↓
+        </p>
+        <Props />
+      </div>
+    </div>
+  )
 }
-
-export default App;
+export default App

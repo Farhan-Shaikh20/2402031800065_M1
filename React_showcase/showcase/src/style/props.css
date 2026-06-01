@@ -1,0 +1,40 @@
+.concept-section {
+  margin-bottom: 64px;
+}
+
+.concept-section h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #1e1e2e;
+}
+
+.concept-desc {
+  color: #b9b8ed;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.cards-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px 16px;
+  border-radius: 12px;
+  width: 160px;
+  text-align: center;
+  color: white;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 13px;
+  margin-top: 6px;
+  opacity: 0.85;
+}
