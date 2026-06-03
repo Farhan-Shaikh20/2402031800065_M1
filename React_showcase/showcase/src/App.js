@@ -1,5 +1,6 @@
 import Sidebar from './components/Sidebar'
 import Props from './concepts/Props'
+import UseStates from './concepts/UseStates'
 
 function App(){
   return(
@@ -11,6 +12,7 @@ function App(){
           Har concept ka live demo neeche hai ↓
         </p>
         <Props />
+        <UseStates />
       </div>
     </div>
   )
