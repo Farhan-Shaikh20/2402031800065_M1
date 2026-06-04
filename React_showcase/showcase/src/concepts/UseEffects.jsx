@@ -1,7 +1,7 @@
-import { useState,useEffext}from 'react'
-import '../styles/UseEffects.css'
+import { useEffect, useState } from 'react'
+import '../style/UseEffects.css'
 
-function useEffects(){
+function UseEffects(){
 
     //DEMO--1 START ONE
     const [seconds,setseconds]=useState(0);
@@ -13,9 +13,9 @@ function useEffects(){
     },[])
 
     //DEMO--2 TITLE CHANGE
-    const [count,setcount]=useState(0);
+    const [count,setCount]=useState(0);
     useEffect(()=>{
-        document.title='Count: ${count}'
+        document.title=`Count: ${count}`
     },[count])
 
     //DEMO--3 FAKE API CALL
@@ -28,12 +28,17 @@ function useEffects(){
         },2000)
     },[])
 
-return(
-   <div id="useeffect" className="concept-section">
+return (
+    <div id="useeffect" className="concept-section">
       <h2>🔄 useEffect</h2>
-      <p className="concept-desc">The useEffect hook allows you to perform side effects in functional components.</p>
-       {/* Demo 1 — Timer */}
-      <div className="effect-timer">
+      <p className="concept-desc">
+        Component screen pe aane ke baad kuch karna ho — useEffect use karo
+      </p>
+
+      {/* Demo 1 — Timer */}
+      <div className="demo-box">
+        <p className="demo-title">Demo 1 — Timer (sirf ek baar start)</p>
+        <div className="effect-timer">
           <span className="timer-num">{seconds}</span>
           <span className="timer-label">seconds since mount</span>
         </div>
@@ -42,10 +47,37 @@ return(
         </p>
       </div>
 
-         {/* Demo 2 — Document title */}
-      
+      {/* Demo 2 — Document title */}
+      <div className="demo-box">
+        <p className="demo-title">Demo 2 — Browser Tab Title badlega</p>
+        <div className="counter-row">
+          <button onClick={() => setCount(count - 1)}>−</button>
+          <span className="count-num">{count}</span>
+          <button onClick={() => setCount(count + 1)}>+</button>
+        </div>
+        <p className="demo-note">
+          Browser tab dekho — title change ho raha hai!
+        </p>
+      </div>
 
+      {/* Demo 3 — Fake API */}
+      <div className="demo-box">
+        <p className="demo-title">Demo 3 — Fake API Call (2 sec delay)</p>
+        {loading ? (
+          <div className="loading-box">⏳ Data load ho raha hai...</div>
+        ) : (
+          <div className="user-card">
+            <p className="user-name">{user.name}</p>
+            <p className="user-role">Age: {user.age}</p>
+          </div>
+        )}
+        <p className="demo-note">
+          useEffect(() =&gt; setTimeout(...), [])
+        </p>
+      </div>
 
-)
-
+    </div>
+  )
 }
+
+export default UseEffects

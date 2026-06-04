@@ -1,6 +1,7 @@
 import Sidebar from './components/Sidebar'
 import Props from './concepts/Props'
 import UseStates from './concepts/UseStates'
+import UseEffects from './concepts/UseEffects'
 
 function App(){
   return(
@@ -13,6 +14,7 @@ function App(){
         </p>
         <Props />
         <UseStates />
+        <UseEffects />
       </div>
     </div>
   )
