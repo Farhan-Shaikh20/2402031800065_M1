@@ -3,6 +3,7 @@ const fs = require("fs/promises")
 const crypto = require("crypto")
 const express = require("express")
 const mongoose = require("mongoose")
+const Contact = require("./models/Contact")
 
 const app = express()
 const PORT = 3000
@@ -10,40 +11,6 @@ const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/contact_ap
 const DATA_DIR = path.join(__dirname, "data")
 const DATA_FILE = path.join(DATA_DIR, "contacts.json")
 let isMongoConnected = false
-
-const contactSchema = new mongoose.Schema(
-  {
-    first_name: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    last_name: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      trim: true,
-      lowercase: true,
-    },
-    phone: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    address: {
-      type: String,
-      trim: true,
-      default: "",
-    },
-  },
-  { timestamps: true }
-)
-
-const Contact = mongoose.model("Contact", contactSchema)
 
 async function readLocalContacts() {
   try {
@@ -141,20 +108,21 @@ async function deleteContact(id) {
 }
 
 // database connection
-mongoose
-  .connect(MONGO_URI, { serverSelectionTimeoutMS: 1000 })
-  .then(() => {
+async function connectDatabase() {
+  try {
+    await mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 5000 })
     isMongoConnected = true
     console.log("MongoDB connected successfully.")
-  })
-  .catch((error) => {
+  } catch (error) {
     isMongoConnected = false
     console.error("MongoDB connection failed:", error.message)
     console.log("Using local JSON database instead.")
-  })
+  }
+}
 
 mongoose.connection.on("disconnected", () => {
   isMongoConnected = false
+  console.error("MongoDB disconnected, using local JSON storage.")
 })
 
 // middleware
@@ -232,6 +200,11 @@ app.post("/delete-contact/:id", async (req, res) => {
   }
 })
 
-app.listen(PORT, () => {
-  console.log(`server started on port ${PORT}.`)
-})
+async function startServer() {
+  await connectDatabase()
+  app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}.`)
+  })
+}
+
+startServer()

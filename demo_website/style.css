@@ -68,6 +68,7 @@ body{
 .top a:hover{
     color: rgb(224, 220, 185);
 }
+
                                     /* Hero Section */
 
 .hero{
@@ -138,6 +139,8 @@ body{
 .products h2{
     text-align: center;
     font-size: 40px;
+    font-weight: bolder;
+    text-shadow: 10px 10px 15px rgba(82, 82, 76, 0.5);
     margin-bottom: 50px;
     color: black;
 }
@@ -190,6 +193,8 @@ body{
 .product-item h3{
     margin-top: 20px;
     color: black;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px rgba(82, 82, 76, 0.5);
     font-size: 25px;
 }
 
@@ -198,6 +203,8 @@ body{
 .product-item p{
     padding: 15px;
     color: #555;
+    font-weight:bold;   
+    text-decoration: wavy;
     line-height: 1.6;
 }
 
@@ -396,3 +403,103 @@ body{
     color: black;
 }
 
+                                            /* Social Icons */
+
+.social-icons a{
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+/* Icon Size */
+
+.social-icons i{
+    margin-right: 10px;
+
+    font-size: 18px;
+}
+
+/* Hover Effect */
+
+.social-icons a:hover{
+    color: gold;
+
+    transform: translateX(5px);
+}
+
+
+
+
+
+
+                                        /* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    /* Navbar */
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .top{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Hero */
+
+    .hero{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .hero p{
+        font-size: 16px;
+    }
+
+    /* Products */
+
+    .product-item{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* About */
+
+    .about{
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .ab-image img{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .ab-contant h2{
+        font-size: 32px;
+    }
+
+    /* Footer */
+
+    .footer-container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
