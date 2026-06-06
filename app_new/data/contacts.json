@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "_id": "bc26a6bd-0818-4794-b93b-984f16f56f27",
+    "first_name": "shaikh",
+    "last_name": "ibrahimbhai",
+    "email": "is499321@gmail.com",
+    "phone": "07359020107",
+    "address": "asgvd",
+    "createdAt": "2026-06-06T07:44:24.840Z",
+    "updatedAt": "2026-06-06T07:44:24.840Z"
+  }
+]
