@@ -1,24 +1,22 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Cheatsheet from './pages/Cheatsheet'
+import Props from './concepts/Props'
+import UseStates from './concepts/UseStates'
+import UseEffects from './concepts/UseEffects'
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="app-container">
-        <Sidebar />
-        <div className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/cheatsheet" element={<Cheatsheet />} />
-          </Routes>
-        </div>
+function App(){
+  return(
+    <div className="main-container">
+      <Sidebar />
+      <div className="main-content">
+        <h1>React Playground</h1>
+        <p style={{ marginBottom: '40px', color: '#b9abf3' }}>
+          Har concept ka live demo neeche hai ↓
+        </p>
+        <Props />
+        <UseStates />
+        <UseEffects />
       </div>
-    </BrowserRouter>
+    </div>
   )
 }
-
 export default App

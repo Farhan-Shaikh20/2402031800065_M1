@@ -6,8 +6,9 @@
 
 body {
   font-family: sans-serif;
-  background-color: #000000;
-  color: #474786;
+  /* changed to light background to make content visible during debugging */
+  background-color: #f7f7fb;
+  color: #111;
 }
 
 .main-container {
