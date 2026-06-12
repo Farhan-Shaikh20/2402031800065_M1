@@ -2,6 +2,7 @@ import Sidebar from './components/Sidebar'
 import Props from './concepts/Props'
 import UseStates from './concepts/UseStates'
 import UseEffects from './concepts/UseEffects'
+import About from './pages/About'
 
 function App(){
   return(
@@ -15,6 +16,7 @@ function App(){
         <Props />
         <UseStates />
         <UseEffects />
+        <About />
       </div>
     </div>
   )
