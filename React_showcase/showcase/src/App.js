@@ -16,7 +16,7 @@ function App(){
         <Props />
         <UseStates />
         <UseEffects />
-        <About />
+        {/* <About /> */}
       </div>
     </div>
   )
